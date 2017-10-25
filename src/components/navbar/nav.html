@@ -1,0 +1,19 @@
+<div class="nav-bar">
+  <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @mouseenter.native="showText=!showText"
+           @mouseleave.native="showText=!showText"
+           unique-opened router>
+    <template v-for="(item,index) in links">
+      <el-submenu :index="index+''" v-if="item.hasLeaf">
+        <template slot="title">
+          <i :class="item.iconClass"></i><span>{{showText?item.name:''}}</span>
+        </template>
+        <el-menu-item v-for="child in item.children" :index="child.path" @click="$router.push(child.path)">
+          <i :class="child.iconClass"></i><span>{{showText?child.name:''}}</span>
+        </el-menu-item>
+      </el-submenu>
+      <el-menu-item v-if="!item.hasLeaf" :index="item.path" @click="$router.push(item.path)">
+        <i :class="item.iconClass"></i><span>{{showText?item.name:''}}</span>
+      </el-menu-item>
+    </template>
+  </el-menu>
+</div>

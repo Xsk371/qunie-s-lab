@@ -1,0 +1,11 @@
+<div id="app">
+  <div @mouseenter="menuEvent(true)" @mouseleave="menuEvent(false)">
+    <nav-bar></nav-bar>
+  </div>
+  <div class="app-view" :class="{'folded':navExpand}">
+    <transition name="fade"
+                mode="out-in">
+      <router-view>loading...</router-view>
+    </transition>
+  </div>
+</div>

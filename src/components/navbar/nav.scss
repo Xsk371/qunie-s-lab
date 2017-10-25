@@ -1,0 +1,34 @@
+.nav-bar {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  .el-menu {
+    height: 100%;
+  }
+  .fa {
+    margin-right: 10px;
+  }
+  transition: all .3s ease;
+
+  &:hover {
+    width: 200px;
+    .el-submenu__title {
+      .el-submenu__icon-arrow {
+        visibility: visible;
+      }
+    }
+  }
+  .el-menu-item {
+    padding-left: 20px!important;
+  }
+
+  .el-submenu__title {
+    .el-submenu__icon-arrow {
+      visibility: hidden;
+    }
+  }
+}
+
