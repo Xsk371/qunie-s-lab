@@ -1,6 +1,6 @@
 # vue-ts
 
-> A Vue.js project
+> A Vue + typescript project
 
 ## Build Setup
 

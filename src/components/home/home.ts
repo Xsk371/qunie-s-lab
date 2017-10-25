@@ -11,7 +11,7 @@ import './home.scss';
 export class HomeComponent extends Vue {
 
   package: string = 'vue-typescript-lab';
-  repo: string = 'https://github.com/ducksoupdev/vue-webpack-typescript';
+  repo: string = 'https://github.com/Xsk371/qunie-s-lab';
   mode: string = process.env.ENV;
 
   @State test;
