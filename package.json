@@ -41,7 +41,7 @@
     "@types/mocha": "~2.2.42",
     "@types/node": "~8.0.24",
     "@types/sinon": "~2.3.3",
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "~7.1.2",
     "awesome-typescript-loader": "~3.2.3",
     "bootstrap-sass": "^3.3.7",
     "chai": "~4.1.1",

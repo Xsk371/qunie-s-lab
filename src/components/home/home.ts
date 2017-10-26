@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import {State} from 'vuex-class';
+// import {State} from 'vuex-class';
 
 import './home.scss';
 
@@ -14,10 +14,10 @@ export class HomeComponent extends Vue {
   repo: string = 'https://github.com/Xsk371/qunie-s-lab';
   mode: string = process.env.ENV;
 
-  @State test;
+  // @State test;
 
   created() {
-    console.log(this.test);
+    // console.log(this.test);
   }
 
 }

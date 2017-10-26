@@ -13,7 +13,7 @@ const glob = require('glob'),
   env = require('../environment/prod.env');
 
 const extractSass = new ExtractTextPlugin({
-  filename: 'css/[name].[contenthash].css',
+  filename: '[name].[contenthash].css',
   disable: process.env.NODE_ENV === 'development'
 });
 
@@ -30,13 +30,13 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
     test: /\.scss$/,
     use: extractSass.extract({
       use: [{
-          loader: 'css-loader',
-          options: {
-            minimize: true,
-            sourceMap: true,
-            importLoaders: 2
-          }
-        },
+        loader: 'css-loader',
+        options: {
+          minimize: true,
+          sourceMap: true,
+          importLoaders: 2
+        }
+      },
         {
           loader: 'postcss-loader',
           options: {
@@ -51,6 +51,27 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
             sourceMapContents: true
           }
         }
+      ],
+      // use style-loader in development
+      fallback: 'style-loader'
+    })
+  },
+  {
+    test: /\.css$/,
+    use: extractSass.extract({
+      use: [{
+        loader: 'css-loader',
+        options: {
+          minimize: true,
+          sourceMap: true,
+          importLoaders: 2
+        }
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          plugins: () => [autoprefixer]
+        }
+      }
       ],
       // use style-loader in development
       fallback: 'style-loader'

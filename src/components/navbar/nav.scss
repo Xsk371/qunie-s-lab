@@ -9,7 +9,7 @@
     height: 100%;
   }
   .fa {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
   transition: all .3s ease;
 
@@ -17,7 +17,7 @@
     width: 200px;
     .el-submenu__title {
       .el-submenu__icon-arrow {
-        visibility: visible;
+        visibility: visible !important;
       }
     }
   }
@@ -27,7 +27,7 @@
 
   .el-submenu__title {
     .el-submenu__icon-arrow {
-      visibility: hidden;
+      visibility: hidden !important;
     }
   }
 }

@@ -13,17 +13,26 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input,
   margin: 0;
   padding: 0;
 }
-*{box-sizing: border-box;}
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   min-height: 100%;
 }
 
 body {
   font-family: "Microsoft YaHei";
-  font-size:14px;
+  font-size: 14px;
+  color: #333;
 }
-h1, h2, h3, h4, h5, h6{font-weight:normal;}
-ul,ol {
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+ul, ol {
   list-style: none;
 }
 
@@ -34,6 +43,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #232323;
 }
 
 table {
@@ -62,7 +72,7 @@ textarea {
   visibility: hidden;
   display: block;
   clear: both;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .fl {
@@ -90,10 +100,9 @@ textarea {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.inline{
+
+.inline {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
-
-

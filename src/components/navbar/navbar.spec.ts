@@ -18,7 +18,7 @@ class MockNavbarComponent extends NavbarComponent {
   }
 }
 
-describe('Navbar component', () => {
+/*describe('Navbar component', () => {
   let directiveTest: ComponentTest;
   let router: VueRouter;
 
@@ -83,4 +83,4 @@ describe('Navbar component', () => {
     });
   });
 
-});
+});*/
